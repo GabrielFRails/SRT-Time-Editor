@@ -108,8 +108,8 @@ int main(int argc, char *argv[]) {
 				string newStartTime = msToTime(startMs);
 				string newEndTime = msToTime(endMs);
 
-				// Reconstruir a linha com o novo tempo
-				line.replace(start + arrowPos - 1, arrowPos + 4, newStartTime + " --> " + newEndTime);
+				// Reconstruir a linha
+				line = line.substr(0, start) + newStartTime + " --> " + newEndTime + line.substr(end + 1);
 			}
 		}
 		outputFile << line << endl;
