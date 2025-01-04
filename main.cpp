@@ -32,6 +32,11 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
+	if (filePath.empty() || timeShift == 0 || operation.empty()) {
+		cerr << ERROR_RIGHT_USE << endl;
+		return 1;
+	}
+
 	ifstream srtFile(filePath);
 	if (!srtFile.is_open()) {
 		cerr << ERROR_FILE_OPEN << endl;
