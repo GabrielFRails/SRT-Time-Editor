@@ -1,3 +1,6 @@
+#define STR_TIME_PATTERN "-->"
+#define ERROR_FILE_OPEN "Was not possible open the srt file"
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,13 +10,13 @@ using namespace std;
 int main() {
 	ifstream srtFile("./Industry.S01E01.srt");
 	if (!srtFile.is_open()) {
-		cerr << "Was not possible open the srt file" << endl;
+		cerr << ERROR_FILE_OPEN << endl;
 		return 1;
 	}
 
 	string line;
 	while (getline(srtFile, line)) {
-		if (line.find("-->") != string::npos) {
+		if (line.find(STR_TIME_PATTERN) != string::npos) {
 			cout << line << endl;
 		}
 	}
