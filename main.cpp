@@ -1,9 +1,10 @@
-#define STR_TIME_PATTERN "-->"
-#define ERROR_FILE_OPEN "Was not possible open the srt file"
 
 #include <iostream>
 #include <fstream>
 #include <string>
+
+#define STR_TIME_PATTERN "-->"
+#define ERROR_FILE_OPEN "Was not possible open the srt file"
 
 using namespace std;
 
