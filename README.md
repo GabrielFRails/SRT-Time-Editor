@@ -1,25 +1,23 @@
 # SRT-Time-Editor
 
 ## Introduction
-I use to watch a lot of media with .srt files together because my mother language is
-Brasil Portuguese (the better one). Sometimes the .srt files i find are out of sync
-and i just use the vlc function to delay or advance the subtitles.
+I've watched a lot of media with .srt files because my native language is Brazilian Portuguese (the best one, obviously). Sometimes, the .srt files I come across are out of sync, so I usually adjust them using VLC's delay or advance functions.
 
-Since i'm on college break, i decided to build my own srt time editor, just for fun :)
+Since I'm on a college break, I decided to build my own SRT time editor, just for fun! :)
 
 ## Usage
 
-compilation:
+Compilation:
 ```
 $ g++ -std=c++11 main.cpp -o main
 ```
 
-exec:
+Execution:
 ```
-$ ./main -f <srt file path> -t <time in ms> -o <delay|advance>
+$ ./main -f <path_to_srt_file> -t <time_in_ms> -o <delay|advance>
 ```
 
-example:
+Example:
 ```
 ./main -f ./Industry.S01E01.srt -t 1000 -o advance
 ```
